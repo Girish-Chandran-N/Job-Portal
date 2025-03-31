@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Applications = () => {
+function Applications() {
   return (
-    <div>
-      Application
-    </div>
+   <>
+   
+   </>
   )
 }
 

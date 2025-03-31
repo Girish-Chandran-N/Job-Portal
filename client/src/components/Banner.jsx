@@ -25,8 +25,9 @@ const Banner = () => {
         }
 
     return (
-        <div className='container 2x1:px-20 mx-auto my-10  py-10  md:px-20 text-center'>
-            <div className='container 2x1:px-20 mx-auto my-10 bg-blue-100 py-10  md:px-20 text-center'>
+        <div className='container 2xl:px-20 mx-auto mt-1 py-10 md:px-20 text-center'>
+
+            <div className='container rounded-xl 2x1:px-20 mx-auto my-10 bg-blue-100 py-10  md:px-20 text-center'>
                 <h2 className='text-3xl md:text-4xl font-semibold text-gray-800'>Get Your First Job</h2>
                 <p className='text-gray-600 mt-3 text-lg'>
                     Over 10,000 jobs to apply. Take the first step towards your dream career.
