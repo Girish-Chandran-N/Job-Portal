@@ -1,28 +1,28 @@
 import React from 'react'
 import { assets } from '../assets/assets'
-import Button from 'react-bootstrap/Button';
+
 import { AppContext } from '../context/AppContext';
 import { useContext, useRef } from 'react';
 
 const Banner = () => {
 
-        const {setSearchFilter, setIsSearched} = useContext(AppContext)
+    const { setSearchFilter, setIsSearched } = useContext(AppContext)
 
-        const titleRef =useRef(null)
-        const locationRef =useRef(null)
+    const titleRef = useRef(null)
+    const locationRef = useRef(null)
 
-        const onSearch = () => {
-            setSearchFilter ({
-                title:titleRef.current.value,
-                location: locationRef.current.value
-            })
-            setIsSearched(true)
-            console.log({
-                title:titleRef.current.value,
-                location: locationRef.current.value
-            });
-            
-        }
+    const onSearch = () => {
+        setSearchFilter({
+            title: titleRef.current.value,
+            location: locationRef.current.value
+        })
+        setIsSearched(true)
+        console.log({
+            title: titleRef.current.value,
+            location: locationRef.current.value
+        });
+
+    }
 
     return (
         <div className='container 2xl:px-20 mx-auto mt-1 py-10 md:px-20 text-center'>
@@ -38,7 +38,7 @@ const Banner = () => {
                     <div className="flex items-center bg-white shadow-md rounded-full overflow-hidden border border-gray-300 px-4">
                         <img src={assets.search_icon} alt="Search Icon" className="w-5 h-5 opacity-70" />
                         <input
-                        ref ={titleRef}
+                            ref={titleRef}
                             type="text"
                             placeholder="Search for jobs..."
                             className="p-2 flex-1 outline-none text-gray-700 bg-transparent placeholder-gray-500"
@@ -49,7 +49,7 @@ const Banner = () => {
                     <div className="flex items-center bg-white shadow-md rounded-full overflow-hidden border border-gray-300 px-4">
                         <img src={assets.location_icon} alt="Location Icon" className="w-5 h-5 opacity-70" />
                         <input
-                         ref ={locationRef}
+                            ref={locationRef}
                             type="text"
                             placeholder="Location"
                             className="p-2 flex-1 outline-none text-gray-700 bg-transparent placeholder-gray-500"
@@ -57,21 +57,25 @@ const Banner = () => {
                     </div>
 
                     {/* Search Button */}
-                    <Button onClick={onSearch} className="">
+                    <button
+                        onClick={onSearch}
+                        className="bg-blue-600 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-700 transition"
+                    >
                         Search
-                    </Button>
+                    </button>
+
                 </div>
 
             </div>
             <div className='border border-grey-300 shadow-md mx-2 mt-5 p-6 rounded-md flex'>
                 <div className='flex justify-center gap-10 lg:gap-16 flex-wrap'>
                     <p className='font-medium'>Trusted by</p>
-                    <img  className='h-6' src={assets.accenture_logo} alt="" />
-                    <img  className='h-6' src={assets.walmart_logo} alt="" />
-                    <img  className='h-6' src={assets.amazon_logo} alt="" />
-                    <img  className='h-6' src={assets.microsoft_logo} alt="" />
-                    <img  className='h-6' src={assets.samsung_logo} alt="" />
-                    <img  className='h-6' src={assets.adobe_logo} alt="" />
+                    <img className='h-6' src={assets.accenture_logo} alt="" />
+                    <img className='h-6' src={assets.walmart_logo} alt="" />
+                    <img className='h-6' src={assets.amazon_logo} alt="" />
+                    <img className='h-6' src={assets.microsoft_logo} alt="" />
+                    <img className='h-6' src={assets.samsung_logo} alt="" />
+                    <img className='h-6' src={assets.adobe_logo} alt="" />
                 </div>
             </div>
         </div>
